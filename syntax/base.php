@@ -120,9 +120,8 @@ class syntax_plugin_typography_base extends DokuWiki_Syntax_Plugin {
                 return $this->render_xhtml($renderer, $indata);
             case 'odt':
                 // ODT export;
-                $odt = $this->loadHelper('typography_odt');
-                //$odt = $this->loadHelper('odt_typography');
-                return $odt->odt_render($renderer, $indata);
+                $odt = $this->loadHelper('odt_typography');
+                return $odt->render($renderer, $indata);
             default:
                 return true;
         }
